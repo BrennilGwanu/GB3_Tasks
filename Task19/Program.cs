@@ -6,15 +6,11 @@
 Console.Clear();
 Console.Write("Введите пятизначное число: ");
 int number = int.Parse(Console.ReadLine()!);
-if (number / 10000 == number % 10)
+int x = number / 1000 % 10;
+int y = number / 10 % 10;
+if (number / 10000 == number % 10 && x == y)
 {
-    x = number / 1000 % 10;
-    y = number / 100 % 10;
-    if (x == y)
-    {
-        Console.Write("да");
-    }
-    else Console.Write("нет");
+    Console.Write("да");
 }
 else
 Console.Write("нет");
